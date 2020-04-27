@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document1</title>
+          <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+   <h1>TABS</h1>
+   <div class="tabs">
+       <nav class="tab-list">
+           <a class="tab tab1  active"onclick="one()">One</a>
+           <a class="tab tab2" onclick="two()">Two</a>
+           <a class="tab tab3" onclick="three()">Three</a>
+       </nav>
+       <div class="box">
+       <div id="one" class="tab-content">
+           <b style="color: black;font-size: 1.5em;">1- </b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est repellat<br>
+           similique rem, reprehenderit nostrum asperiores aliquid laudantium sequi.<br>
+            Ipsum aliquam similique neque voluptate deleniti error reprehenderit<br>
+             eos nam cumque corporis?
+       </div>
+       <div id="two" class="tab-content">
+           <b style="color: black;font-size: 1.5em;">2- </b>
+           similique rem, reprehenderit nostrum asperiores aliquid laudantium<br> sequi.
+           Ipsum aliquam similique neque voluptate deleniti error reprehenderit<br>
+            eos nam cumque corporis?Lorem ipsum dolor sit amet consectetur adipisicing<br> elit. Est repellat<br>
+          
+       </div>
+       <div id="three" class="tab-content">
+           <b style="color: black;font-size: 1.5em;">3- </b>
+           similique rem, reprehenderit nostrum asperiores aliquid laudantium<br> sequi.
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Est repellat<br>
+            Ipsum aliquam similique neque voluptate deleniti error reprehenderit<br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est repellat<br>
+             eos nam cumque corporis?
+       </div>
+   </div>
+   </div>
+   <script src="./jquery-3.4.1.min.js"></script>
+  
+<script>
+
+       $(document).ready(function(){
+   $(".tab1").click(function(){
+   $('#one').css("display","block")
+   $('#one').siblings().css("display","none")
+   $('.tab1').addClass('active')
+   $(".tab1").siblings().removeClass('active')
+ });
+
+ $(".tab2").click(function(){
+     $('#one').css("display","none")
+     $('#three').css("display","none")
+   $('#two').css("display","block");
+   $('#two').css({
+       display:"block",
+   });
+   $('.tab2').addClass('active')
+   $(".tab2").siblings().removeClass('active')
+ });
+
+ $(".tab3").click(function(){
+   $('#one').css("display","none")
+   $('#two').css("display","none")
+   $('#three').css("display","block");
+   $('.tab3').addClass('active')
+   $(".tab3").siblings().removeClass('active')
+ });
+});
+</script>   
+</body>
+</html>
